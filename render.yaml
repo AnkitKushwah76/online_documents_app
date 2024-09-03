@@ -1,7 +1,7 @@
 databases:
-  - name: mysite
+  - name: online_documents_app_production
     databaseName: online_documents_app_production
-    user: mysite_user
+    user: postgres
     plan: free
 
 services:
@@ -11,7 +11,6 @@ services:
     plan: free
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec rails server"
-    env: ruby 
     envVars:
       - key: DATABASE_URL
         fromDatabase:
