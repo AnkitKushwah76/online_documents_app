@@ -11,8 +11,7 @@ services:
     plan: free
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec rails server"
-    env: ruby
-    version: 3.2.2 
+    env: ruby 
     envVars:
       - key: DATABASE_URL
         fromDatabase:
