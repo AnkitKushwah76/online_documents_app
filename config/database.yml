@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: postgres 
+  password: newpassword 
+  pool: 5
+
+development:
+  <<: *default
+  database: online_documents_app_development
+
+test:
+  <<: *default
+  database: online_documents_app_test
+
+production:
+  <<: *default
+  database: online_documents_app_production
+  username: postgres
+  password: <%= ENV['POSTGRES_PROD_PASSWORD'] %>

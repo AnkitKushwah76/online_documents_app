@@ -1,0 +1,8 @@
+<h1><%= @document.title %></h1>
+<p><%= @document.description %></p>
+
+<p>
+  <%= link_to 'Download File', rails_blob_path(@document.file, disposition: 'attachment') %>
+</p>
+
+<%= link_to 'Back to Documents', documents_path %>
