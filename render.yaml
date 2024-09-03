@@ -1,6 +1,6 @@
 databases:
   - name: mysite
-    databaseName: online_documents_app_development
+    databaseName: online_documents_app_production
     user: mysite_user
     plan: free
 
