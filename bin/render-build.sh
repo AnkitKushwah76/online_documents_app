@@ -2,12 +2,17 @@
 # exit on error
 set -o errexit
 
+# Install gems
 bundle install
+
+# Precompile assets
 bundle exec rails assets:precompile
+
+# Clean up old assets
 bundle exec rails assets:clean
 
-# If you're using a Free instance type, you need to
-# perform database migrations in the build command.
-# Uncomment the following line:
+# Create the database
+bundle exec rails db:create
 
-# bundle exec rails db:migrate
+# Run database migrations
+bundle exec rails db:migrate
