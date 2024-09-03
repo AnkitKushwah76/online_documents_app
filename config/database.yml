@@ -18,4 +18,5 @@ production:
   <<: *default
   database: online_documents_app_production
   username: postgres
-  password: <%= ENV['POSTGRES_PROD_PASSWORD'] %>
+  password: newpassword
+
