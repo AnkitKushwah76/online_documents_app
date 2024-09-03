@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :documents, only: [:index, :new, :create, :show]
+  resources :documents
   root 'documents#index'
 end

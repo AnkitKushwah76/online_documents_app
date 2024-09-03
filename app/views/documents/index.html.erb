@@ -6,6 +6,8 @@
   <% @documents.each do |document| %>
     <li>
       <%= link_to document.title, document %>
+
+     <%= button_to 'Delete', document_path(document), method: :delete, data: { confirm: 'Are you sure you want to delete this document?' }, class: 'btn btn-danger' %>
     </li>
   <% end %>
 </ul>
