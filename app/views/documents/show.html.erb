@@ -1,6 +1,10 @@
 <h1><%= @document.title %></h1>
 <p><%= @document.description %></p>
 
+<% if @document.file.attached? %>
+  <%= link_to 'View The file', rails_blob_path(@document.file, disposition: 'inline'), target: '_blank' %>
+<% end %>
+
 <p>
   <%= link_to 'Download File', rails_blob_path(@document.file, disposition: 'attachment') %>
 </p>
